@@ -17,7 +17,10 @@ public class Contact implements Serializable {
     public  String uid;
     public  String name;
     public  String email;
-
+    public  String bnumber;
+    public  String address;
+    public  String brole;
+    public  String province;
     public Contact() {
         // Default constructor required for calls to DataSnapshot.getValue
     }
@@ -34,6 +37,11 @@ public class Contact implements Serializable {
         result.put("uid", uid);
         result.put("name", name);
         result.put("email", email);
+        result.put("business",bnumber);
+        result.put("address",address);
+        result.put("business",bnumber);
+        result.put("province",brole);
+        result.put("province",province);
 
         return result;
     }

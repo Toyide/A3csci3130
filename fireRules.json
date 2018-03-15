@@ -5,10 +5,22 @@
     "contacts": {
             "$contact": {
                 "name": {
-                    ".validate": "newData.isString() && newData.val().length < 50"
+                    ".validate": "newData.isString() && newData.val().length < 49 && newData.val().length > 1 "
                 },
                 "email": {
                     ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
+                },
+                "bnumber": {
+                  ".validate": "newData.isString() && newData.val().matches(/^[0-9]+$/) && newData.val().length ==9"
+                },
+                "address": {
+                  ".validate": "newData.isString() && newData.val().length < 50"
+                },
+                "brole": {
+                  ".validate": "newData.val().matches(/^(Fisher|Distributor|Processor|Fish Monger)$/)"
+                },
+                "province": {
+                  ".validate": "newData.val().matches(/^(AB|BC|MB|NB|NL|NT|NU|ON|PE|QC|SK|YT| )$/)"
                 }
             }
         }
