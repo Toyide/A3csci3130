@@ -77,13 +77,13 @@ public class DetailViewActivity extends Activity {
         String userId = receivedPersonInfo.uid;
         String name = nameField.getText().toString();
         String email = emailField.getText().toString();
-        String bnum = BnumberField.getText().toString();
+        String Bnum = BnumberField.getText().toString();
         String addr = addressField.getText().toString();
-        String brole = BroleSpin.getSelectedItem().toString();
+        String Brole = BroleSpin.getSelectedItem().toString();
         String prov = provinceSprin.getSelectedItem().toString();
 
-        String ar[] = {name,email,bnum,addr,brole,prov};
-        String names[] = {"name","email","bnumber","address","brole","province"};
+        String ar[] = {name,email,Bnum,addr,Brole,prov};
+        String names[] = {"name","email","Bnum","address","Brole","province"};
 
         for (int i=0; i<6; i++){
             app.firebaseReference.child(userId).child(names[i]).setValue(ar[i]);
