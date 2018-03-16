@@ -10,13 +10,13 @@
                 "email": {
                     ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
                 },
-                "bnumber": {
+                "Bnum": {
                   ".validate": "newData.isString() && newData.val().matches(/^[0-9]+$/) && newData.val().length ==9"
                 },
                 "address": {
                   ".validate": "newData.isString() && newData.val().length < 50"
                 },
-                "brole": {
+                "Brole": {
                   ".validate": "newData.val().matches(/^(Fisher|Distributor|Processor|Fish Monger)$/)"
                 },
                 "province": {
